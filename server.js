@@ -8,15 +8,13 @@ var bodyParser = require('koa-bodyparser');
 var routes = require('./server/routes');
 var view = require('./server/views/jsonresponseview'); 
 var config = require('./config/config');
-
     
-var db = monk(config.dbConnectionString);   
-
 var app = koa();
 app.use(gzip());
 app.use(serve('web'));
-app.use(serve('libs'));
+app.use(serve('node_modules'));
 app.use(bodyParser());
+var db = monk(config.dbConnectionString); 
 
 app.use(function*(next) {
     this.db = db;

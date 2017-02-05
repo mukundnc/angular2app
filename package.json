@@ -4,7 +4,7 @@
   "description": "My KOA Angular2 project",
   "scripts": {
     "serve": "node server",
-    "build": "tsc -p src/",
+    "build": "tsc -p web/",
     "start": "concurrently \"npm run build\" \"npm run serve\""
   },
   "contributors": [
@@ -12,6 +12,18 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@angular/common": "~2.2.1",
+    "@angular/compiler": "~2.2.1",
+    "@angular/compiler-cli": "~2.2.1",
+    "@angular/core": "~2.2.1",
+    "@angular/forms": "~2.2.1",
+    "@angular/http": "~2.2.1",
+    "@angular/platform-browser": "~2.2.1",
+    "@angular/platform-browser-dynamic": "~2.2.1",
+    "@angular/platform-server": "~2.2.1",
+    "@angular/router": "~3.2.1",
+    "@angular/upgrade": "~2.2.1",
+    "angular2-in-memory-web-api": "0.0.21",
     "bootstrap": "^3.3.7",
     "co-monk": "^1.0.0",
     "core-js": "^2.4.1",
